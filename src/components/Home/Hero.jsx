@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import React from "react";
 
 export default function Hero() {
   const heroImage = "/images/hero/construction-hero.jpg";
