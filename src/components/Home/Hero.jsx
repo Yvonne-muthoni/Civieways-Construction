@@ -23,8 +23,7 @@ export default function Hero() {
         <h1 className="text-2xl md:text-3xl font-bold mb-6 mt-2 text-amber-300">
           Professional Construction & Engineering Services
         </h1>
-        <p className="max-w-2xl mx-auto text-lg mb-8">
-          Delivering residential, commercial and industrial construction projects.
+        <p className="max-w-2xl mx-auto text-medium mb-8">
           Delivering residential, commercial and industrial construction projects across Kenya.
         </p>
 

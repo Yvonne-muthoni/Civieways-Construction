@@ -39,7 +39,7 @@ export default function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
-      className="text-lg text-white max-w-2xl mx-auto"
+      className="text-medium text-white max-w-2xl mx-auto"
     >
       Civieways is a professional construction and engineering company delivering reliable building, infrastructure and industrial solutions across Kenya.
 

@@ -108,7 +108,7 @@ export default function Services() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="max-w-2xl mx-auto text-lg"
+            className="max-w-2xl mx-auto text-medium"
           >
             Professional residential, commercial and infrastructure construction solutions across Kenya.
           </motion.p>

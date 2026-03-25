@@ -86,7 +86,7 @@ ${formData.message}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
-      className="max-w-2xl mx-auto text-lg"
+      className="max-w-2xl mx-auto text-medium"
     >
       Have a construction project in mind? Let's discuss how we can help you build.
     </motion.p>

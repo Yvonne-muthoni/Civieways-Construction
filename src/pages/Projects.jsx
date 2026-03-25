@@ -82,7 +82,7 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="max-w-2xl mx-auto text-lg"
+            className="max-w-2xl mx-auto text-medium"
           >
             Explore some of the residential, institutional and infrastructure
             projects delivered by Civieways Construction.
