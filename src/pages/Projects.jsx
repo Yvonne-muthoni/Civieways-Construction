@@ -1,0 +1,255 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { projects } from "../data/projectsData";
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+
+export default function Projects() {
+
+  const heroImage =
+    "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM.jpeg";
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  // ✅ STATE FOR FILTERING
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  // ✅ CATEGORY LOGIC
+  const getCategory = (project) => {
+    if (
+      project.category.toLowerCase().includes("education") ||
+      project.heading.toLowerCase().includes("school")
+    ) {
+      return "Schools";
+    }
+
+    if (
+      project.category.toLowerCase().includes("health") ||
+      project.heading.toLowerCase().includes("hospital")
+    ) {
+      return "Hospitals";
+    }
+
+    if (project.category.toLowerCase().includes("residential")) {
+      return "Residentials";
+    }
+
+    if (
+      project.category.toLowerCase().includes("agricultural") ||
+      project.heading.toLowerCase().includes("poultry")
+    ) {
+      return "Agri Farms";
+    }
+
+    return "Others";
+  };
+
+  // ✅ FILTERED PROJECTS
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => getCategory(p) === activeCategory);
+
+  return (
+    <div className="bg-gray-50 min-h-screen">
+
+      {/* HERO SECTION */}
+      <section
+        className="relative py-25 flex items-center justify-center text-center"
+        style={{
+          backgroundImage: `url(${encodeURI(heroImage)})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        <div className="relative z-10 text-white px-6">
+
+          <motion.h1
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl md:text-4xl font-bold mb-4 text-amber-300"
+          >
+            Our Projects
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="max-w-2xl mx-auto text-lg"
+          >
+            Explore some of the residential, institutional and infrastructure
+            projects delivered by Civieways Construction.
+          </motion.p>
+
+          {/* Stats */}
+          <section className="mt-8 flex justify-center">
+            <div
+              ref={ref}
+              className="bg-blue-100 py-4 px-4 rounded-lg max-w-2xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+            >
+              <div>
+                <h3 className="text-3xl font-bold text-blue-900">
+                  {inView ? 120 : 0}+
+                </h3>
+                <p className="text-gray-700">Projects Completed</p>
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold text-blue-900">
+                  {inView ? 10 : 0}+
+                </h3>
+                <p className="text-gray-700">Years Experience</p>
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold text-blue-900">
+                  {inView ? 95 : 0}+
+                </h3>
+                <p className="text-gray-700">Happy Clients</p>
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold text-blue-900">
+                  {inView ? 8 : 0}
+                </h3>
+                <p className="text-gray-700">Ongoing Projects</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section className="bg-white py-12">
+        <div className="max-w-5xl mx-auto text-center px-6">
+
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-3xl md:text-4xl font-bold text-blue-900 mb-6"
+          >
+            Building Excellence Across Every Project
+          </motion.h2>
+
+          <motion.p
+            className="text-gray-600 text-lg leading-relaxed"
+          >
+            We take pride in delivering high-quality construction projects
+            across residential, commercial and institutional sectors.
+          </motion.p>
+
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="bg-gray-100 py-20">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* ✅ CATEGORY BUTTONS */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {["All", "Schools", "Hospitals", "Residentials", "Agri Farms"].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-5 py-2 rounded-full font-semibold transition ${
+                  activeCategory === cat              
+            ? "bg-yellow-400 text-black"
+            : "bg-white text-yellow-500 border border-yellow-400 hover:bg-yellow-400 hover:text-black"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* ✅ PROJECT LIST */}
+          <div className="space-y-16">
+            {filteredProjects.map((project) => (
+
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-white shadow-xl rounded-2xl p-8"
+              >
+
+                <div className="md:flex md:gap-10 items-center">
+
+                  {/* IMAGE */}
+                  <div className="md:w-1/2">
+                    <img
+                      src={project.cover}
+                      alt={project.heading}
+                      className="w-full h-80 object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="md:w-1/2 mt-8 md:mt-0">
+
+                    <h2 className="text-2xl font-bold text-blue-900 mb-3">
+                      {project.heading}
+                    </h2>
+
+                    <p className="font-bold mb-2">
+                      {project.location}
+                    </p>
+
+                    <p className="text-gray-600 mb-4">
+                      {project.description}
+                    </p>
+
+                    <p className="font-semibold mb-6">
+                      {project.category}
+                    </p>
+
+                    <Link
+                      to={`/projects/${project.id}`}
+                      className="text-blue-900 font-semibold underline hover:text-blue-700"
+                    >
+                      View project
+                    </Link>
+
+                  </div>
+
+                </div>
+
+              </motion.div>
+
+            ))}
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+      <section className="py-12 bg-yellow-500 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+          Start Your Construction Project with Us
+        </h2>
+
+        <p className="text-blue-900 mb-8">
+          Contact Civieways Construction today and let's build something great.
+        </p>
+
+        <a
+          href="/contact"
+          className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+        >
+          Contact Us
+        </a>
+      </section>
+
+    </div>
+  );
+}
