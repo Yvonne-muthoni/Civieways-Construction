@@ -275,5 +275,27 @@ export const projects = [
 "/images/Cathlab/av (7).jpeg",
     ],
   },
+  {
+  id: "Avenue Kisumu",
+  heading: "Avenue Hospital Kisumu",
+  location: "📍Parklands, Kisumu – Kenya",
+  description:
+    "The Avenue Hospital Kisumu project involved construction and interior works within a specialized healthcare environment. The project focused on delivering functional, durable and high-quality spaces designed to support efficient healthcare services and patient care.",
+  category: "Healthcare Infrastructure / Medical Construction",
+  cover: "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.12 AM.jpeg",
+  images: [
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.08 AM (1).jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.08 AM.jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.09 AM (1).jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.09 AM (2).jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.09 AM.jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.10 AM (1).jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.10 AM.jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.11 AM (1).jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.11 AM.jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.12 AM.jpeg",
+    "/images/Kisumu/WhatsApp Image 2026-08-11 at 9.30.13 AM.jpeg"
+  ],
+},
 
 ]
