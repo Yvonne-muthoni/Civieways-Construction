@@ -277,7 +277,7 @@ export const projects = [
   },
   {
   id: "Avenue Kisumu",
-  heading: "Avenue Hospital Kisumu",
+  heading: "Avenue hospital Kisumu",
   location: "Kisumu – Kenya",
   description:
     "The Avenue Hospital Kisumu project involved construction and interior works within a specialized healthcare environment. The project focused on delivering functional, durable and high-quality spaces designed to support efficient healthcare services and patient care.",
