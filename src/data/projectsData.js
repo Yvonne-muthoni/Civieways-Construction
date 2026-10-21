@@ -1,4 +1,21 @@
 export const projects = [
+
+  {
+    id: "Haco Indutries",
+    heading: "Haco Industries Project",
+    location: "📍Kasarani, Nairobi – Kenya",
+    description:
+      "The Haco Industries project involved infrastructure and technical works within an industrial manufacturing environment. The project focused on supporting production operations,facility functionality and efficient industrial workspace design in line with modern manufacturing standards.",
+    category: "Industrial / Manufacturing Facility",
+    cover: "/images/Haco Industries/h.b.jpeg",
+    images: [
+   "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.50 AM.jpeg",
+  "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.55 AM (2).jpeg",
+  "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.55 AM (3).jpeg",
+  "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.55 AM.jpeg",
+  "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.56 AM.jpeg",
+    ],
+  },
  {
     id: "Joseph's Home",
     heading: "Residential Home",
