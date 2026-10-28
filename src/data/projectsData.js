@@ -1,13 +1,13 @@
 export const projects = [
 
   {
-    id: "Haco Indutries",
-    heading: "Haco Industries Project",
-    location: "📍Kasarani, Nairobi – Kenya",
+    id: "Ruai",
+    heading: "Ruai Near Gituamba Primary",
+    location: "📍Ruai, Nairobi – Kenya",
     description:
-      "The Haco Industries project involved infrastructure and technical works within an industrial manufacturing environment. The project focused on supporting production operations,facility functionality and efficient industrial workspace design in line with modern manufacturing standards.",
+      "This is an initiative that provides a safe, comfortable, and welcoming environment where individuals and families can relax, enjoy their holidays, and create lasting memories. The project aims to offer quality accommodation, recreational activities, and a peaceful atmosphere while promoting tourism, hospitality, and community development.",
     category: "Industrial / Manufacturing Facility",
-    cover: "/images/Haco Industries/h.b.jpeg",
+    cover: "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.50 AM.jpeg",
     images: [
    "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.50 AM.jpeg",
   "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.55 AM (2).jpeg",
