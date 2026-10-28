@@ -6,7 +6,7 @@ export const projects = [
     location: "📍Ruai, Nairobi – Kenya",
     description:
       "This is an initiative that provides a safe, comfortable, and welcoming environment where individuals and families can relax, enjoy their holidays, and create lasting memories. The project aims to offer quality accommodation, recreational activities, and a peaceful atmosphere while promoting tourism, hospitality, and community development.",
-    category: "Industrial / Manufacturing Facility",
+    category: "Hospitality and Leisure Construction",
     cover: "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.50 AM.jpeg",
     images: [
    "/images/Holiday/WhatsApp Image 2026-10-19 at 9.13.50 AM.jpeg",
